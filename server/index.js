@@ -3,12 +3,17 @@ import React from 'react'
 import {renderToString} from 'react-dom/server'
 import express from 'express'
 import App from '../src/App'
+import {StaticRouter} from 'react-router-dom'
 
 const app = express();
 app.use(express.static('public'));
-app.get('/',(req,res)=>{
-    //const Page = <App title="learn01,ssr环境配置~"></App>;
-    const content = renderToString(App);
+app.get('*',(req,res)=>{
+    //把react组件，解析成html
+    const content = renderToString(
+      <StaticRouter location={req.url}>
+        {App}
+      </StaticRouter>
+    );
     res.send(`
      <html>
        <meta charset="utf-8"/>
