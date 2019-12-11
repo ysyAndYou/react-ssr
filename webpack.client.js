@@ -1,5 +1,4 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals')
 module.exports={
     mode:"development",
     //客户端入口
@@ -15,7 +14,7 @@ module.exports={
                 loader:'babel-loader',
                 exclude:/node_modules/,
                 options:{
-                    persets:['@babel/perset-react',['@babel/perset-env']]
+                    presets:['@babel/preset-react',['@babel/preset-env']]
                 }
             }
         ]

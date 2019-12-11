@@ -16,7 +16,7 @@ module.exports={
                 loader:'babel-loader',
                 exclude:/node_modules/,
                 options:{
-                    persets:['@babel/perset-react',['@babel/perset-env']]
+                    presets:['@babel/preset-react',['@babel/preset-env']]
                 }
             }
         ]
