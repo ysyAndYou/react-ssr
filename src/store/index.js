@@ -15,7 +15,7 @@ export const getIndexList = server=>{
            .then(res=>{
                const {list} = res.data
                dispatch(changeList(list))
-           })
+          })
     }
 }
 
