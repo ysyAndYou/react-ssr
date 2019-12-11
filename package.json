@@ -6,7 +6,7 @@
   "scripts": {
     "dev:client": "webpack --config webpack.client.js --watch",
     "dev:server": "webpack --config webpack.server.js --watch",
-    "dev:start": "nodeemon --watch build --exec node \"./build/bundle.js\""
+    "dev:start": "nodemon --watch build --exec node \"./build/bundle.js\""
   },
   "repository": {
     "type": "git",
